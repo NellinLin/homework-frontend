@@ -1,7 +1,5 @@
-# Вариант №6
-# Шишова Анастасия АПО-22
-
-
+# frontend-homework 
+> Introductory homework for the course "Frontend-development"
 
 ## Привет!
 
