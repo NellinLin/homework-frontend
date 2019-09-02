@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Рисует ёлочку из '*'
+ * Рисует ёлочку заданной высоты из '*'
  * 
  * @param {Number} lineCount - передаваемое целое число (высота ёлочки)
  * @returns {String} - возвращаемая строка (изображение ёлочки)
@@ -25,7 +25,7 @@ function tree(lineCount) {
         treePicture += drawLine('*'.repeat(i * 2 + 1), treeLines - i - 1) + '\n';
     }
 
-    treePicture += drawLine('|', treeLines - 1 ) + '\n';
+    treePicture += drawLine('|', treeLines - 1) + '\n';
     
     return treePicture;
 }
