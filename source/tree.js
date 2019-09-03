@@ -13,7 +13,7 @@
 const tree = (lineCount) => {
     const count = +lineCount;
     
-    if (count < 3 || isNaN(count)) {
+    if (isNaN(count) || count < 3) {
         return null;
     }
 
