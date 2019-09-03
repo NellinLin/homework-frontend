@@ -10,7 +10,7 @@
  * tree(3);
  * // => ' * \n***\n | \n'
  */
-function tree(lineCount) {
+const tree = (lineCount) => {
     const count = +lineCount;
     
     if (count < 3 || isNaN(count)) {
@@ -19,7 +19,6 @@ function tree(lineCount) {
 
     const treeLines = count - 1;
     let treePicture = '';
-    const drawLine = (str, padding) => str.padStart(str.length + padding).padEnd(str.length + padding * 2);
     
     for (let i = 0; i < treeLines; i++) {
         treePicture += drawLine('*'.repeat(i * 2 + 1), treeLines - i - 1) + '\n';
@@ -29,3 +28,15 @@ function tree(lineCount) {
     
     return treePicture;
 }
+
+/**
+ * Создаёт строку с заданными симметричными отсутпами и заданной строкой в центре
+ * 
+ * @param {String} str - строка, которая будет расположена в центре
+ * @param {Number} padding - отступы
+ * @example
+ * 
+ * drawLine("***", 1)
+ * // => ' *** '
+ */
+const drawLine = (str, padding) => str.padStart(str.length + padding).padEnd(str.length + padding * 2);
